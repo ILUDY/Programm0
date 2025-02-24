@@ -1,0 +1,37 @@
+#include <iostream>;
+using namespace std;
+int main(){
+    int a,b,c,k=0,x;
+    cin>>a>>b>>c;
+    if (c<0){
+       cout<<"NO SOLUTION";
+       system("pause");
+       return(0);
+    }
+    else{
+       c*=c;
+       if(a==0){
+         if(c==b){
+             cout<<"MANY SOLUTIONS";
+             system("pause");
+             return(0);
+         }
+         else{
+             cout<<"NO SOLUTION";
+             return(0);
+         }
+       }
+       else{
+         x=(c-b)/a;
+         if ((c-b)%a==0 && a*x>=-b){
+             cout<<x;
+             k++;
+         }
+       }
+       if(k==0){
+         cout<<"NO SOLUTION";
+       }
+       system("pause");
+    }
+    return(0);
+}
